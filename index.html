@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" tpye="text/css" href="assets/css/reset.css">
+</head>
+
+<body>
+    <div id="hangman-header">
+        <h1>Hangman</h1>
+    </div>
+    <hr>
+    <div id="characters-container"></div>
+    <script type="text/javascript">
+
+        const words = ["tacos", "enchiladas", "burritos", "carnitas", "queso", "salsa", "guac", "fajitas", "tamales"]
+        function getRandomWord() {
+            const randomWordIndex = Math.floor(Math.random() * words.length);
+            return words[randomWordIndex];
+        }
+
+        const containerElement = document.getElementById("characters-container")
+        let activeGame;
+        function startNewGame() {
+            activeGame = {
+                selectedCharacters: [],
+                word: getRandomWord()
+
+            };
+        }
+
+        function syncUI() {
+
+            containerElement.innerHTML = '';//delete everything in the container element
+            const characters = activeGame.word.split('');
+            characters.forEach(function (character) {
+
+
+                const characterElement = document.createElement('div');
+                containerElement.appendChild(characterElement);
+
+                let value = '_';
+                if (activeGame.selectedCharacters.includes(character)) value = character;
+                characterElement.innerHTML = value;
+            });
+
+        }
+
+        startNewGame()
+        window.addEventListener("keyup", function (event) {
+
+
+
+
+            const isNotInArray = !activeGame.selectedCharacters.includes(event.key);
+            if (isNotInArray) {
+                activeGame.selectedCharacters.push(event.key);
+            }
+            syncUI();
+
+
+
+            console.log(activeGame.selectedCharacters);
+
+
+
+        });
+
+
+
+    </script>
+
+</body>
+
+
+
+</html>

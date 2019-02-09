@@ -1,0 +1,22 @@
+body {
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+hr {
+    margin: 2rem;
+}
+
+#characters-container {
+    display: flex;
+    justify-content: center;
+}
+
+#characters-container > div {
+    background: pink;
+    padding: 1rem;
+    margin: .5rem;  
+}
