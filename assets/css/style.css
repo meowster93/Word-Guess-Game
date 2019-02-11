@@ -4,6 +4,16 @@ body {
 
 h1 {
     font-size: 24px;
+    background: violet;
+    color: black;
+    text-align: center;
+    border: 10%;
+}
+
+#hangman-header {
+    padding: 3%;
+    margin: 4%;
+    background: blueviolet;
 }
 
 hr {
