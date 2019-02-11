@@ -50,3 +50,21 @@ hr {
     padding: 1rem;
     margin: .5rem;  
 }
+
+p {
+    background: white;
+}
+
+footer {
+    padding: 1.5%;
+    clear: both;
+    font-size: 12px;
+    color: #cccccc;
+    text-align: center;
+    background: purple;
+    border-top: 8px solid #4aaaa5;
+    height: 10.5%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
