@@ -4,7 +4,7 @@ body {
 
 h1 {
     font-size: 24px;
-    background: violet;
+    background: rgb(109, 22, 109);
     color: black;
     text-align: center;
     border: 10%;
@@ -23,6 +23,26 @@ hr {
 #characters-container {
     display: flex;
     justify-content: center;
+}
+
+#characters-selected {
+    background: rgb(86, 51, 184);
+    padding: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#characters-selected > div {
+    margin: .5rem;
+}
+#characters-selected > div.isCorrect {
+    color: lightblue;
+    font-weight: bold;
+}
+#characters-selected > div:not(.isCorrect) {
+    color: red;
+    font-weight: bold;
 }
 
 #characters-container > div {
